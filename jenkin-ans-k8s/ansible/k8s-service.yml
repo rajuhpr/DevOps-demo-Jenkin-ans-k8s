@@ -1,0 +1,9 @@
+---
+- name: Create service using deployment
+  hosts: k8-management-server
+  become: true
+  user: root
+
+  tasks:
+  - name: create a service
+    command: kubectl apply -f service.yml

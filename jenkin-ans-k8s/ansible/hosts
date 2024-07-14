@@ -1,0 +1,6 @@
+[ansible-server]
+localhost
+
+
+[k8-management-server]
+172.31.12.162
