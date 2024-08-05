@@ -17,4 +17,3 @@ pipeline {
   }
 }
 
-https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero/blob/main/java-maven-sonar-argocd-helm-k8s/spring-boot-app/JenkinsFile
