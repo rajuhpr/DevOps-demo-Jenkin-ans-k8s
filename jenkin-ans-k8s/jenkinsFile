@@ -10,7 +10,7 @@ pipeline {
     }
     stage('maven build') {
       steps {
-        sh 'java-project && mvn clean package'
+        sh 'cd jenkin-ans-k8s && mvn clean package'
         echo 'maven build works!'
       }
     }
