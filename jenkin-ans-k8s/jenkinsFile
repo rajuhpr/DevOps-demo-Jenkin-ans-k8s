@@ -1,18 +1,19 @@
 pipeline {
-  agent any
-  stages {
-    stage('Checkout') {
-      steps {
-        sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
-      }
+    agent any
+    environment {
+        PATH = "/opt/maven/bin:$PATH"
     }
-    stage('Build and Test') {
-      steps {
-        // sh 'ls -ltr'
-        // build the project and create a JAR file
-        sh 'cd jenkin-ans-k8s && mvn clean package'
-      }
+    stages {
+        stage('Git') {
+            steps {
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/rajuhpr/DevOps-demo.git'
+                echo "Git clone is success! "
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "cd jenkin-ans-k8s && mvn clean install"
+            }
+        }        
     }
-  }
 }
