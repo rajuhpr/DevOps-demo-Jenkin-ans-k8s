@@ -1,3 +1,3 @@
 # maven-project
 
-Demo Maven Project
+Demo: Sample CI-CD Project
